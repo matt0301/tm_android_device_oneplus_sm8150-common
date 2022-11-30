@@ -36,14 +36,18 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.offload.pstimeout.secs=3
 
 PRODUCT_ODM_PROPERTIES += \
-    persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.audio.hac.enable=false \
     ro.vendor.audio.sdk.fluencetype=fluence \
+    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.fluence.audiorec=false \
+    persist.vendor.audio.fluence.voicecall=false \
+    persist.vendor.audio.fluence.speaker=false \
+    persist.vendor.audio.fluence.voicecomm=false \
+    persist.vendor.audio.hac.enable=false \
     ro.audio.monitorRotation=true \
     ro.config.media_vol_steps=30 \
     ro.config.vc_call_vol_steps=6 \
     vendor.audio.hal.output.suspend.supported=false
-
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
